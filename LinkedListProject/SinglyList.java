@@ -84,4 +84,36 @@ public class SinglyList {
         }
         return data;
     }
+    public int headElement()
+    {
+        int data=-1;
+        if(head!=null)
+        {
+            data=head.data;
+        }return data;
+    }
+    public int tailElement()
+    {
+        int data=-1;
+        if(head!=null)
+        {
+            data=tail.data;
+        }return data;
+    }
+    public void reverse()
+    {
+        Node current,prev,nextnode;
+        if(head==null||head.next==null){}
+        else
+        {
+            current=head;prev=null;
+            while(current!=null)
+            {
+                nextnode=current.next;
+                current.next=prev;
+                prev=current;
+                current=nextnode;
+            }head=prev;
+        }
+    }
 }
