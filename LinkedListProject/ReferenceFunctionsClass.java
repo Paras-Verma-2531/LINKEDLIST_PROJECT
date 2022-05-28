@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class ReferenceFunctionsClass {
     public  void DisplayDetails()
     {
-        System.out.println("'1' to add at the beginning\n'2' to add at the end\n'3' to add at the position\n'4' to delete from the beginning\n'5' to delete from end\n'6' to delete from position\n'7' to reverse the list\n'8' to exit");
+        System.out.println("'1' to add at the beginning\n'2' to add at the end\n'3' to add at the position\n'4' to delete from the beginning\n'5' to delete from end\n'6' to delete from position\n'7' to reverse the list\n'8' to Display\n'9' to exit");
     }
     public void PerformOperations(int x)
     {
@@ -46,6 +46,9 @@ public class ReferenceFunctionsClass {
                     System.out.println("successfully done");
                     break;
                 case 8:
+                    System.out.println("the list is :");
+                    sl.Display();
+                case 9:
                     val=false;
                 default:
                     System.out.println("Enter valid Input");
