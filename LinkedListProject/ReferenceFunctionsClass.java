@@ -8,7 +8,7 @@ public class ReferenceFunctionsClass {
 
     public Boolean PerformOperations(int x, SinglyList sl) {
         Scanner in = new Scanner(System.in);
-        int data, pos, deletedData;
+        int data, pos, deletedData,res;
         switch (x) {
             case 1:
                 System.out.print("enter the data:");
@@ -27,8 +27,8 @@ public class ReferenceFunctionsClass {
                 data = in.nextInt();
                 System.out.print("Enter the position:");
                 pos = in.nextInt();
-                sl.addAtPos(pos, data);
-                System.out.println("successfully done");
+                res=sl.addAtPos(pos, data);
+                System.out.println(res==0?"successfully done":"invalid position");
                 break;
             case 4:
                 System.out.println("successfully done");

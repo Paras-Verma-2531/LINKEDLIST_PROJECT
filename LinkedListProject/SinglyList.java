@@ -25,7 +25,7 @@ public class SinglyList {
     }
     public int addAtPos(int pos,int data)
     {
-        if(pos<1||pos>head.length){ return -1;}// invalid pos : return -1;
+        if(pos<1||pos>Node.length){ return -1;}// invalid pos : return -1;
         else if(pos==1)
         {
             addAtBeg(data);// if pos ==1(add at beg)
@@ -46,7 +46,7 @@ public class SinglyList {
     public int deleteFromBeg()
     { int data=-1;
         if(head!=null) {
-            head.length--;
+            Node.length--;
             data = head.data;
             if (head.next == null) {
                 head = null;
@@ -60,7 +60,7 @@ public class SinglyList {
         int data=-1;
         temp=head;
         if(head!=null)
-        { head.length--;
+        { Node.length--;
             while(temp.next.next!=null)
             {
                 temp=temp.next;
@@ -70,9 +70,9 @@ public class SinglyList {
     }
     public int deleteFromPos(int pos)
     { int data=-1;
-        if(pos<1||pos>head.length){return  -1;}
+        if(pos<1||pos>Node.length){return  -1;}
         else if(pos==1){ data=deleteFromBeg();}
-        else if(pos==head.length){data=deleteFromEnd();}
+        else if(pos==Node.length){data=deleteFromEnd();}
         else
         {temp=head;
             int i=1;
