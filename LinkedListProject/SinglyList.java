@@ -116,4 +116,14 @@ public class SinglyList {
             }head=prev;
         }
     }
+    public void Display()
+    {
+        temp=head;
+        while(temp.next!=null)
+        {
+            System.out.print(temp.data+"-->");
+            temp=temp.next;
+        }
+        System.out.println(temp.data);
+    }
 }
