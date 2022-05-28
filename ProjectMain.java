@@ -12,12 +12,18 @@ public class ProjectMain {
         {
             case 1:
                rf.DisplayDetails();
+               choice=in.nextInt();
+               rf.PerformOperations(choice);
                 break;
             case 2:
                rf.DisplayDetails();
+               choice=in.nextInt();
+               rf.PerformOperations(choice);
                 break;
             case 3:
                 rf.DisplayDetails();
+                choice=in.nextInt();
+                rf.PerformOperations(choice);
                 break;
             default:
                 System.out.println("enter valid choice");
