@@ -51,7 +51,6 @@ public class ReferenceFunctionsClass {
                 System.out.println(res==-1?"List is Empty":"Successfully reversed");
                 break;
             case 8:
-                System.out.println("the list is :");
                 sl.Display();
                break;
             case 9:
