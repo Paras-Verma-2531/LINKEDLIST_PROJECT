@@ -102,7 +102,7 @@ public class SinglyList {
     }
     public int reverse()
     {
-        Node current,prev,nextnode;
+        Node current, prev, nextnode;
         if(head==null)return -1;
         else if(head.next==null)return 0;
         else
