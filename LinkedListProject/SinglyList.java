@@ -42,24 +42,27 @@ public class SinglyList {
     }
     public int deleteFromBeg()
     { int data=-1;
-        if(head!=null) {
+        if(head==null)return data;
+        else if(head.next==null)
+        {
+            data=head.data;head=tail=null;Node.length=0;
+        }
+        else {
             Node.length--;
             data = head.data;
-            if (head.next == null) {
-                head = null;
-            } else {
-                head = head.next;
-            }
-        }return data;
+            head = head.next;
+        }
+        return data;
     }
     public int deleteFromEnd()
     {
         int data=-1;
         temp=head;
-        if(head.next==null) {
+        if(head==null)return data;
+        else if(head.next==null) {
             data = head.data;head=tail=null;Node.length=0;
         }
-        if(head!=null)
+        else
         { Node.length--;
             while(temp.next.next!=null)
             {
@@ -101,8 +104,9 @@ public class SinglyList {
             }head=prev;
         }return 0;
     }
-    public void Display()
+    public int Display()
     {
+        if(head==null) return -1;
         temp=head;
         while(temp.next!=null)
         {
@@ -110,5 +114,6 @@ public class SinglyList {
             temp=temp.next;
         }
         System.out.println(temp.data);
+        return 0;
     }
 }
