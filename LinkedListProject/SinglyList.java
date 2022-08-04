@@ -104,16 +104,17 @@ public class SinglyList {
             }head=prev;
         }return 0;
     }
-    public int Display()
+    public void Display()
     {
-        if(head==null) return -1;
+        if(head==null) System.out.println("the List is Empty");
         temp=head;
+        System.out.println("The list is: ");
         while(temp.next!=null)
         {
             System.out.print(temp.data+"-->");
             temp=temp.next;
         }
         System.out.println(temp.data);
-        return 0;
+
     }
 }
