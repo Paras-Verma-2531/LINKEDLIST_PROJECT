@@ -100,10 +100,11 @@ public class SinglyList {
             data=tail.data;
         }return data;
     }
-    public void reverse()
+    public int reverse()
     {
         Node current,prev,nextnode;
-        if(head==null||head.next==null){}
+        if(head==null)return -1;
+        else if(head.next==null)return 0;
         else
         {
             current=head;prev=null;
@@ -114,7 +115,7 @@ public class SinglyList {
                 prev=current;
                 current=nextnode;
             }head=prev;
-        }
+        }return 0;
     }
     public void Display()
     {
