@@ -6,9 +6,8 @@ public class SinglyList {
     {
         Node node= new Node(data);
         if(head!=null)
-        {
             node.next=head;
-        }head=tail=node;// if head == null
+        head=tail=node;// if head == null
     }
     public void addAtEnd(int data)
     {
@@ -19,9 +18,7 @@ public class SinglyList {
             tail=node;// add node at end
         }
         else
-        {
-            head=temp=node;
-        }
+         head=tail=node;
     }
     public int addAtPos(int pos,int data)
     {
@@ -59,6 +56,9 @@ public class SinglyList {
     {
         int data=-1;
         temp=head;
+        if(head.next==null) {
+            data = head.data;head=tail=null;Node.length=0;
+        }
         if(head!=null)
         { Node.length--;
             while(temp.next.next!=null)
@@ -83,22 +83,6 @@ public class SinglyList {
             temp=temp.next.next;// make further linking
         }
         return data;
-    }
-    public int headElement()
-    {
-        int data=-1;
-        if(head!=null)
-        {
-            data=head.data;
-        }return data;
-    }
-    public int tailElement()
-    {
-        int data=-1;
-        if(head!=null)
-        {
-            data=tail.data;
-        }return data;
     }
     public int reverse()
     {
