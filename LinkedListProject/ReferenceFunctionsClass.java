@@ -19,13 +19,13 @@ public class ReferenceFunctionsClass {
                 System.out.print("enter the data:");
                 data = in.nextInt();
                 sl.addAtBeg(data);
-                System.out.println("successfully done");
+                System.out.println(data+" is successfully added");
                 break;
             case 2:
                 System.out.print("enter the data:");
                 data = in.nextInt();
                 sl.addAtEnd(data);
-                System.out.println("successfully done");
+                System.out.println(data+" is successfully added");
                 break;
             case 3:
                 System.out.print("enter the data:");
@@ -33,7 +33,7 @@ public class ReferenceFunctionsClass {
                 System.out.print("Enter the position:");
                 pos = in.nextInt();
                 res=sl.addAtPos(pos, data);
-                System.out.println(res==0?"successfully done":"invalid position");
+                System.out.println(res==0?data+"is successfully added to the "+pos+ " positiion":"invalid position");
                 break;
             case 4:
                 res=sl.deleteFromBeg();
@@ -58,7 +58,8 @@ public class ReferenceFunctionsClass {
                 return false;
             default:
                 System.out.println("Enter valid Input");
-        }return true;
+        }System.out.println("\t\t*****************************************");
+        return true;
     }
 }
 
