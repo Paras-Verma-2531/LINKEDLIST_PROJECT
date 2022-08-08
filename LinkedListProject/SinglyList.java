@@ -4,8 +4,9 @@ public class SinglyList {
     public void addAtBeg(int data)
     {
         Node node= new Node(data);
-        if(head!=null)
-            node.next=head;
+        if(head!=null) {
+            node.next = head;head=node;
+        }
         else
         head=tail=node;// if head == null
     }
