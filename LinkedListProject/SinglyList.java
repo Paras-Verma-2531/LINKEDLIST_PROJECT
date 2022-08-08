@@ -1,5 +1,4 @@
 package LinkedListProject;
-
 public class SinglyList {
     Node head,temp,tail;
     public void addAtBeg(int data)
@@ -7,6 +6,7 @@ public class SinglyList {
         Node node= new Node(data);
         if(head!=null)
             node.next=head;
+        else
         head=tail=node;// if head == null
     }
     public void addAtEnd(int data)
@@ -22,12 +22,10 @@ public class SinglyList {
     }
     public int addAtPos(int pos,int data)
     {
-        if(pos<1||pos>Node.length){ return -1;}// invalid pos : return -1;
+        if(pos<1||pos>Node.length)return -1;// invalid pos : return -1;
         else if(pos==1)
-        {
             addAtBeg(data);// if pos ==1(add at beg)
-            return 0;
-        }else
+        else
         {Node node=new Node(data);
             int i=1;
             temp=head;
@@ -37,8 +35,7 @@ public class SinglyList {
                 i++;
             }node.next=temp.next;// link between previous data
             temp.next=node;// insert node at temp next
-            return 0;
-        }
+        }return  0;
     }
     public int deleteFromBeg()
     { int data=-1;
@@ -65,9 +62,9 @@ public class SinglyList {
         else
         { Node.length--;
             while(temp.next.next!=null)
-            {
                 temp=temp.next;
-            }data=temp.next.data;
+            tail=temp;
+            data=temp.next.data;
             temp.next=null;
         }return data;
     }
@@ -115,6 +112,5 @@ public class SinglyList {
             temp=temp.next;
         }
         System.out.println(temp.data);
-
     }
 }

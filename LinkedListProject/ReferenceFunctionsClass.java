@@ -44,7 +44,10 @@ public class ReferenceFunctionsClass {
                 System.out.println(res==-1?"List is Empty":" The deleted data is : "+res);
                 break;
             case 6:
-                System.out.println("successfully done");
+                System.out.print("Enter the position:");
+                pos = in.nextInt();
+                res=sl.deleteFromPos(pos);
+                System.out.println(res==-1?"Invalid position":"the deleted data is "+res);
                 break;
             case 7:
                 res=sl.reverse();
